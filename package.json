@@ -4,7 +4,7 @@
     "description": "Server for company access control a bit safe.",
     "main": "src/app.js",
     "scripts": {
-        "test": "jest --watchAll",
+        "test": "jest --all",
         "release": "standard-version -a && git push --follow-tags origin pre-prod",
         "build": "tsc -p ./",
         "start-linux": "sudo npm run build ; nodemon --watch src src/**.ts",
