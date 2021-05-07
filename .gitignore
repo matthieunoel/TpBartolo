@@ -1,7 +1,12 @@
 node_modules
+node_modules/**.*
 src/**/*.js
 src/**/*.map
-*.log
+log
+log/**.*
 tmp
+tmp/**.*
 db
+db/**.*
+.vscode
 .vscode/**.*
