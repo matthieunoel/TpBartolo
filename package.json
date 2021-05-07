@@ -4,11 +4,20 @@
     "description": "Server for company access control a bit safe.",
     "main": "src/app.js",
     "scripts": {
-        "test": "jest --watchall",
+        "test": "jest --watchAll",
         "release": "standard-version -a && git push --follow-tags origin pre-prod",
         "build": "tsc -p ./",
         "start-linux": "sudo npm run build ; nodemon --watch src src/**.ts",
         "start-wnd": "npm run build && nodemon --watch src src/**.ts"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "coveragePathIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "testMatch": [
+            "**/__test__/**/*.ts"
+        ]
     },
     "repository": {
         "type": "git",
@@ -39,6 +48,9 @@
         "uuid": "^3.4.0"
     },
     "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "jest": "^26.6.3",
+        "jest-fetch-mock": "^3.0.3",
         "nodemon": "^2.0.6",
         "standard-version": "^7.1.0",
         "tslint": "^6.0.0"
