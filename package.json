@@ -1,0 +1,46 @@
+{
+    "name": "ClientsRestApi",
+    "version": "1.2.1",
+    "description": "Server for company access control a bit safe.",
+    "main": "src/app.js",
+    "scripts": {
+        "test": "jest --watchall",
+        "release": "standard-version -a && git push --follow-tags origin pre-prod",
+        "build": "tsc -p ./",
+        "start-linux": "sudo npm run build ; nodemon --watch src src/**.ts",
+        "start-wnd": "npm run build && nodemon --watch src src/**.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:matthieunoel/TpBartolo.git"
+    },
+    "homepage": "https://github.com/matthieunoel/TpBartolo",
+    "author": "Matthieu NOEL",
+    "license": "ISC",
+    "dependencies": {
+        "@types/body-parser": "^1.19.0",
+        "@types/express": "^4.17.11",
+        "@types/multer": "^1.4.2",
+        "@types/node": "^15.0.2",
+        "better-sqlite3": "^6.0.1",
+        "body-parser": "^1.19.0",
+        "class-transformer": "^0.2.3",
+        "class-validator": "^0.11.0",
+        "cors": "^2.8.5",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "multer": "^1.4.2",
+        "node-gyp": "^8.0.0",
+        "reflect-metadata": "^0.1.13",
+        "routing-controllers": "^0.8.1-alpha.2",
+        "ts-node": "^9.1.1",
+        "typedi": "^0.8.0",
+        "typescript": "^3.7.5",
+        "uuid": "^3.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6",
+        "standard-version": "^7.1.0",
+        "tslint": "^6.0.0"
+    }
+}
